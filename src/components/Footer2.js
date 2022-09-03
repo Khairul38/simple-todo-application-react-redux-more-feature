@@ -1,12 +1,12 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { colorChanged, statusChanged } from "../redux/filters/action";
+import { colorChanged } from "../redux/filters/action";
 
 const Footer2 = () => {
   const dispatch = useDispatch();
   const todos = useSelector((state) => state.todos);
   const filters = useSelector((state) => state.filters);
-  const { status, completedTaskColors } = filters;
+  const { completedTaskColors } = filters;
 
   const todosRemaining = todos.filter((todo) => todo.completed).length;
 
